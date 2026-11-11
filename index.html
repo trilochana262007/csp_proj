@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#173f2b">
+<title>Smart Fertilizer | Sustainable Farming</title>
+<style>
+:root{--green:#1f6b45;--deep:#173f2b;--lime:#c8e6a0;--cream:#f7f8f1;--ink:#203329;--muted:#68766d;--line:#e3e9df;--white:#fff;--gold:#e9b44c;--shadow:0 12px 32px rgba(27,61,41,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{display:flex;min-height:100vh}.sidebar{width:248px;background:var(--deep);color:#eaf4e9;padding:26px 18px;position:fixed;inset:0 auto 0 0;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:11px;padding:0 10px 30px}.brandmark{width:38px;height:38px;border-radius:12px;background:#c8e6a0;color:#173f2b;display:grid;place-items:center;font-size:21px}.brand strong{display:block;font-size:16px;letter-spacing:.2px}.brand small{color:#b9cdbd;font-size:11px}.navlabel{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#92ad99;padding:12px 12px 8px}.nav button{width:100%;border:0;background:transparent;color:#d7e5d8;text-align:left;padding:11px 12px;border-radius:10px;margin:2px 0;display:flex;gap:12px;align-items:center;font-size:13px}.nav button.active,.nav button:hover{background:#2c5a3d;color:#fff}.nav .ico{width:20px;text-align:center;font-size:16px}.sidefoot{margin-top:auto;border-top:1px solid #355c43;padding:17px 10px 0;color:#a9c0ae;font-size:11px}.main{margin-left:248px;width:calc(100% - 248px);padding:30px 38px 55px;max-width:1600px}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.eyebrow{color:var(--green);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px}.topbar h1{font-size:23px;margin:3px 0 0;letter-spacing:-.6px}.top-actions{display:flex;gap:10px;align-items:center}.pill{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;color:#43574a;font-size:12px}.hero{background:linear-gradient(115deg,#173f2b 0%,#286b45 65%,#57935b 100%);border-radius:22px;padding:31px 34px;color:#fff;display:grid;grid-template-columns:1.4fr .8fr;gap:25px;overflow:hidden;position:relative;box-shadow:var(--shadow)}.hero:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff24;border-radius:50%;right:9%;top:-125px;box-shadow:0 0 0 35px #ffffff0a,0 0 0 70px #ffffff08}.hero h2{font-size:30px;line-height:1.16;letter-spacing:-1px;margin:9px 0 12px;max-width:580px}.hero p{color:#d7e9d9;max-width:590px;margin:0 0 20px;font-size:14px}.hero .eyebrow{color:#c8e6a0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:10px 15px;font-weight:700;font-size:12px}.btn.primary{background:#c8e6a0;color:#173f2b}.btn.ghost{background:#ffffff17;color:#fff;border:1px solid #ffffff40}.hero-art{display:grid;place-items:center;position:relative;z-index:1}.plant{font-size:115px;filter:drop-shadow(0 12px 8px #092b1a44)}.art-caption{font-size:11px;color:#d7e9d9;text-align:center;margin-top:-8px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:19px 0 25px}.stat,.panel,.feature{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 16px rgba(27,61,41,.035)}.stat{padding:17px 18px}.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.stat-icon{width:30px;height:30px;background:#eff6e9;border-radius:9px;display:grid;place-items:center}.stat strong{display:block;font-size:25px;letter-spacing:-.8px;margin:8px 0 0}.stat small{font-size:10px;color:var(--muted)}.section-head{display:flex;justify-content:space-between;align-items:end;margin:25px 0 13px}.section-head h3{font-size:17px;margin:0;letter-spacing:-.3px}.section-head p{font-size:11px;color:var(--muted);margin:3px 0 0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}.panel{padding:19px}.panel h4{margin:0 0 4px;font-size:14px}.sub{font-size:11px;color:var(--muted);margin:0 0 16px}.barrow{display:grid;grid-template-columns:115px 1fr 42px;gap:10px;align-items:center;margin:12px 0;font-size:11px}.track{height:9px;background:#edf1eb;border-radius:20px;overflow:hidden}.fill{height:100%;border-radius:20px;background:#5c9c64}.barrow:nth-child(4) .fill{background:#d9a849}.barrow:nth-child(5) .fill{background:#87b7a1}.barrow:nth-child(6) .fill{background:#a8c77a}.barrow b{text-align:right;font-size:11px}.note{background:#f5f8ef;border:1px solid #e6eddc;border-radius:10px;padding:10px 12px;color:#60705f;font-size:10px;margin-top:13px}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{padding:17px}.feature .ficon{font-size:22px;margin-bottom:10px}.feature h4{font-size:13px;margin:0 0 5px}.feature p{font-size:11px;color:var(--muted);margin:0}.fourr{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:13px}.fourr div{background:#f4f8ef;border-radius:11px;padding:12px}.fourr b{display:block;color:var(--green);font-size:12px}.fourr span{font-size:10px;color:var(--muted)}.page{display:none}.page.active{display:block}.page-intro{margin:0 0 20px}.page-intro h2{font-size:25px;margin:0 0 5px}.page-intro p{color:var(--muted);font-size:13px;margin:0}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:700;color:#45564a}.field input,.field select,.field textarea{border:1px solid #dce5d9;border-radius:9px;padding:10px 11px;background:#fff;color:var(--ink);outline:none;width:100%}.field input:focus,.field select:focus,.field textarea:focus{border-color:#70a77a;box-shadow:0 0 0 3px #70a77a20}.field textarea{min-height:75px;resize:vertical}.form-actions{display:flex;gap:9px;margin-top:16px;align-items:center}.btn.green{background:var(--green);color:#fff}.btn.light{background:#eef4e9;color:var(--green)}.result{margin-top:15px;background:#f1f7ec;border:1px solid #dcebd3;padding:15px;border-radius:12px;display:none}.result strong{font-size:20px;color:var(--green)}.result p{font-size:11px;margin:5px 0 0;color:#5b6c5d}.warning{font-size:11px;color:#805c1e;background:#fff8e8;border:1px solid #f2e2b8;border-radius:10px;padding:12px;margin-top:14px}.question{padding:14px 0;border-bottom:1px solid var(--line)}.question:last-child{border:0}.question b{font-size:12px;display:block;margin-bottom:8px}.options{display:flex;gap:9px;flex-wrap:wrap}.options label{font-size:11px;color:#536258;display:flex;gap:5px;align-items:center;background:#f7f9f5;padding:6px 9px;border-radius:8px}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse;font-size:11px}.table th,.table td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}.table th{color:var(--muted);font-weight:700}.empty{color:var(--muted);text-align:center;padding:22px;font-size:12px}.guide-list{display:grid;gap:10px}.guide-item{display:flex;gap:12px;padding:13px;background:#f8faf6;border:1px solid var(--line);border-radius:12px}.guide-item .n{width:28px;height:28px;flex:0 0 28px;border-radius:9px;background:#e8f2df;color:var(--green);display:grid;place-items:center;font-weight:800}.guide-item b{font-size:12px}.guide-item p{font-size:11px;color:var(--muted);margin:2px 0 0}.toast{position:fixed;bottom:20px;right:20px;background:#173f2b;color:#fff;padding:11px 16px;border-radius:10px;font-size:12px;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);transition:.25s;pointer-events:none;z-index:20}.toast.show{opacity:1;transform:translateY(0)}.mobile-menu{display:none}
+@media(max-width:1050px){.main{padding:25px 22px;margin-left:220px;width:calc(100% - 220px)}.sidebar{width:220px}.stats{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr .45fr}.plant{font-size:85px}}
+@media(max-width:760px){.sidebar{width:250px;transform:translateX(-100%);transition:.25s}.sidebar.open{transform:translateX(0)}.main{margin:0;width:100%;padding:18px 15px 40px}.mobile-menu{display:inline-grid;place-items:center;border:1px solid var(--line);background:#fff;border-radius:9px;width:37px;height:37px;margin-right:10px}.topbar{align-items:flex-start}.topbar-left{display:flex;align-items:center}.topbar h1{font-size:19px}.top-actions .pill{display:inline-flex}.top-actions{gap:6px;flex-wrap:wrap;justify-content:flex-end}.top-actions select{max-width:82px}.hero{grid-template-columns:1fr;padding:23px}.hero h2{font-size:26px}.hero-art{display:none}.stats{gap:9px}.stat{padding:13px}.stat strong{font-size:22px}.grid2,.feature-grid{grid-template-columns:1fr}.fourr{grid-template-columns:repeat(2,1fr)}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.section-head{align-items:start;gap:10px;flex-direction:column}}
+
+#languageSelect{cursor:pointer}#speakBtn,#stopSpeakBtn{cursor:pointer;min-height:46px;font-weight:800}
+#speakBtn:focus-visible,#stopSpeakBtn:focus-visible,#languageSelect:focus-visible{outline:3px solid #c8e6a0;outline-offset:2px}
+@media(max-width:760px){.top-actions .pill{font-size:10px;padding:7px 9px}.top-actions select{max-width:78px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar" id="sidebar">
+ <div class="brand"><div class="brandmark">♧</div><div><strong>AgriSmart</strong><small>SUSTAINABLE FARMING</small></div></div>
+ <div class="navlabel">Workspace</div>
+ <nav class="nav">
+  <button class="active" data-page="overview"><span class="ico">▦</span>Overview</button>
+  <button data-page="planner"><span class="ico">⌁</span>Fertilizer planner</button>
+  <button data-page="survey"><span class="ico">☷</span>Farmer survey</button>
+  <button data-page="insights"><span class="ico">◔</span>Project insights</button>
+  <button data-page="learn"><span class="ico">✳</span>Learning centre</button>
+ </nav>
+ <div class="navlabel">About</div>
+ <nav class="nav"><button data-page="about"><span class="ico">ⓘ</span>About the project</button></nav>
+ <div class="sidefoot">A practical guide to balanced nutrients, healthy soil and responsible fertilizer use.</div>
+</aside>
+<main class="main">
+ <header class="topbar">
+  <div class="topbar-left"><button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button><div><div class="eyebrow">Agriculture • Sustainability</div><h1 id="pageTitle">Farming dashboard</h1></div></div>
+  <div class="top-actions">
+    <label class="pill" for="languageSelect">🌐 <span id="languageLabel">Language</span>
+      <select id="languageSelect" aria-label="Choose language" style="border:0;background:transparent;color:inherit;font-weight:700;max-width:105px">
+        <option value="en">English</option><option value="te">తెలుగు</option><option value="hi">हिन्दी</option>
+      </select>
+    </label>
+    <button class="pill" id="speakBtn" type="button" title="Read this page aloud">🔊 <span id="speakLabel">Listen</span></button>
+    <button class="pill" id="stopSpeakBtn" type="button" title="Stop speaking">⏹ <span id="stopLabel">Stop</span></button>
+    <label class="pill voice-choice" for="voiceGenderSelect">🗣️ <span id="voiceLabel">Voice</span>
+      <select id="voiceGenderSelect" aria-label="Choose voice type">
+        <option value="auto">Automatic</option><option value="female">Female</option><option value="male">Male</option>
+      </select>
+    </label>
+    <button class="pill help-pill" id="helpGuideBtn" type="button">❔ <span id="helpGuideLabel">Voice guide</span></button>
+    <span class="pill">🌱 <span id="soilPill">Soil-first approach</span></span><span class="pill" id="today"></span>
+  </div>
+ </header>
+
+ <section class="page active" id="overview">
+  <div class="hero">
+   <div><div class="eyebrow">Grow better. Waste less.</div><h2>Smarter fertilizer use starts with healthier soil.</h2><p>Explore practical ways to match nutrients to crop needs, reduce unnecessary inputs and protect the environment.</p><div class="hero-actions"><button class="btn primary" onclick="showPage('planner')">Open fertilizer planner →</button><button class="btn ghost" onclick="showPage('learn')">Explore smart practices</button></div></div>
+   <div class="hero-art"><div class="plant">🌱</div><div class="art-caption">Healthy soil • Balanced nutrients • Better harvests</div></div>
+  </div>
+  <div class="stats">
+   <div class="stat"><div class="stat-top"><span>Organic fertilizers</span><span class="stat-icon">🍃</span></div><strong>40%</strong><small>Project-reported survey figure</small></div>
+   <div class="stat"><div class="stat-top"><span>Smart-fertilizer awareness</span><span class="stat-icon">💡</span></div><strong>60%</strong><small>Project-reported survey figure</small></div>
+   <div class="stat"><div class="stat-top"><span>Reported cost barrier</span><span class="stat-icon">₹</span></div><strong>40%</strong><small>Project-reported survey figure</small></div>
+   <div class="stat"><div class="stat-top"><span>Land using smart fertilizers</span><span class="stat-icon">🌾</span></div><strong>55%</strong><small>Project-reported survey figure</small></div>
+  </div>
+  <div class="section-head"><div><h3>What smart fertilizer management means</h3><p>Four practical decisions for efficient nutrient use.</p></div></div>
+  <div class="panel">
+   <h4>The 4R nutrient stewardship principle</h4><p class="sub">Use the right nutrient source, in the right quantity, at the right time and in the right place.</p>
+   <div class="fourr"><div><b>01 · Right Source</b><span>Choose a nutrient source suited to the crop and soil.</span></div><div><b>02 · Right Rate</b><span>Match the quantity to soil-test and crop needs.</span></div><div><b>03 · Right Time</b><span>Apply nutrients when the crop can use them.</span></div><div><b>04 · Right Place</b><span>Place nutrients where roots can access them.</span></div></div>
+  </div>
+  <div class="section-head"><div><h3>Explore the toolkit</h3><p>Simple tools and knowledge for sustainable farm decisions.</p></div></div>
+  <div class="feature-grid">
+   <div class="feature"><div class="ficon">🧪</div><h4>Soil-health first</h4><p>Understand existing nutrient levels before deciding what to apply.</p></div>
+   <div class="feature"><div class="ficon">🧮</div><h4>Area-based planning</h4><p>Calculate total product quantity from an advised rate and field area.</p></div>
+   <div class="feature"><div class="ficon">♻️</div><h4>Sustainable inputs</h4><p>Learn about compost, bio-fertilizers and slow-release options.</p></div>
+  </div>
+ </section>
+
+ <section class="page" id="planner">
+  <div class="page-intro"><h2>Fertilizer quantity planner</h2><p>Estimate total product quantity using a rate from a soil-test recommendation or qualified agricultural adviser.</p></div>
+  <div class="grid2">
+   <div class="panel">
+    <h4>Enter field and recommendation details</h4><p class="sub">This tool performs area and quantity arithmetic only.</p>
+    <div class="formgrid">
+     <div class="field"><label for="area">Land area</label><input id="area" type="number" min="0" step="any" placeholder="e.g. 1.5"></div>
+     <div class="field"><label for="unit">Area unit</label><select id="unit"><option value="acre">Acres</option><option value="hectare">Hectares</option><option value="sqm">Square metres</option></select></div>
+     <div class="field"><label for="rate">Advised fertilizer rate</label><input id="rate" type="number" min="0" step="any" placeholder="e.g. 50"></div>
+     <div class="field"><label for="rateUnit">Rate unit</label><select id="rateUnit"><option value="kg-ha">kg per hectare</option><option value="kg-acre">kg per acre</option><option value="g-sqm">grams per square metre</option></select></div>
+     <div class="field full"><label for="product">Fertilizer / product name (optional)</label><input id="product" placeholder="e.g. Product listed in soil-test recommendation"></div>
+    </div>
+    <div class="form-actions"><button class="btn green" id="calcBtn">Calculate quantity</button><button class="btn light" id="clearCalc">Clear</button></div>
+    <div class="result" id="calcResult" aria-live="polite"></div>
+   </div>
+   <div class="panel">
+    <h4>Before applying fertilizer</h4><p class="sub">Use the result as a planning estimate, not as a crop recommendation.</p>
+    <div class="guide-list">
+     <div class="guide-item"><div class="n">1</div><div><b>Get the soil tested</b><p>Check the soil nutrient profile and soil-health card.</p></div></div>
+     <div class="guide-item"><div class="n">2</div><div><b>Confirm crop requirements</b><p>Use crop- and growth-stage-specific guidance from an agricultural expert.</p></div></div>
+     <div class="guide-item"><div class="n">3</div><div><b>Check the product label</b><p>Confirm nutrient concentration, application method and safety instructions.</p></div></div>
+     <div class="guide-item"><div class="n">4</div><div><b>Record each application</b><p>Track date, field, product and quantity for future planning.</p></div></div>
+    </div>
+    <div class="warning">Important: No universal fertilizer dosage is suitable for every crop or soil. Do not use this calculator to decide the recommended rate. Enter a rate already provided by a current soil test or qualified local adviser.</div>
+   </div>
+  </div>
+ </section>
+
+ <section class="page" id="survey">
+  <div class="page-intro"><h2>Farmer practice survey</h2><p>Record fertilizer practices and awareness. Responses are saved only in this browser on this device.</p></div>
+  <div class="grid2">
+   <div class="panel">
+    <h4>Survey questionnaire</h4><p class="sub">No name, phone number or personal identifier is requested.</p>
+    <form id="surveyForm">
+     <div class="field"><label for="crop">1. Which crop do you mainly grow?</label><select id="crop" required><option value="">Choose a crop</option><option>Paddy</option><option>Maize</option><option>Vegetables</option><option>Fruits</option><option>Sugarcane</option><option>Pulses</option><option>Other</option></select></div>
+     <div class="question"><b>2. What type of fertilizer do you commonly use?</b><div class="options"><label><input type="radio" name="fert" value="Urea" required> Urea</label><label><input type="radio" name="fert" value="DAP"> DAP</label><label><input type="radio" name="fert" value="Organic compost"> Organic compost</label><label><input type="radio" name="fert" value="Bio-fertilizers"> Bio-fertilizers</label><label><input type="radio" name="fert" value="Other"> Other</label></div></div>
+     <div class="question"><b>3. Are you aware of smart fertilizers?</b><div class="options"><label><input type="radio" name="aware" value="Yes" required> Yes</label><label><input type="radio" name="aware" value="No"> No</label></div></div>
+     <div class="question"><b>4. Do you test soil before applying fertilizer?</b><div class="options"><label><input type="radio" name="soil" value="Yes" required> Yes</label><label><input type="radio" name="soil" value="No"> No</label></div></div>
+     <div class="question"><b>5. How do you decide the quantity?</b><div class="options"><label><input type="radio" name="basis" value="Experience" required> Experience</label><label><input type="radio" name="basis" value="Expert advice"> Expert advice</label><label><input type="radio" name="basis" value="Soil test"> Soil test</label><label><input type="radio" name="basis" value="Guess"> Guess</label></div></div>
+     <div class="question"><b>6. How do you apply fertilizer?</b><div class="options"><label><input type="radio" name="method" value="Manual spreading" required> Manual spreading</label><label><input type="radio" name="method" value="Drip irrigation"> Drip irrigation</label><label><input type="radio" name="method" value="Spray"> Spray</label><label><input type="radio" name="method" value="Machinery"> Machinery</label></div></div>
+     <div class="question"><b>7. Do you think smart fertilizers support sustainable farming?</b><div class="options"><label><input type="radio" name="sustain" value="Yes" required> Yes</label><label><input type="radio" name="sustain" value="No"> No</label><label><input type="radio" name="sustain" value="Not sure"> Not sure</label></div></div>
+     <div class="field"><label for="comments">8. Main challenge or comment (optional)</label><textarea id="comments" placeholder="Share a farming challenge or suggestion"></textarea></div>
+     <div class="form-actions"><button class="btn green" type="submit">Save survey response</button><button class="btn light" type="reset">Reset form</button></div>
+    </form>
+   </div>
+   <div class="panel">
+    <h4>Collected responses</h4><p class="sub">Responses saved in this browser.</p>
+    <div class="stat" style="background:#f7faf4;box-shadow:none"><div class="stat-top"><span>Total responses</span><span>📋</span></div><strong id="responseCount">0</strong><small>Locally stored entries</small></div>
+    <div class="form-actions"><button class="btn light" id="exportCsv">Export CSV</button><button class="btn light" id="clearSurvey">Clear responses</button></div>
+    <div class="tablewrap" style="margin-top:16px"><table class="table"><thead><tr><th>Crop</th><th>Soil test</th><th>Awareness</th></tr></thead><tbody id="surveyRows"><tr><td colspan="3" class="empty">No responses yet.</td></tr></tbody></table></div>
+    <div class="note">Privacy: this demo stores entries in browser local storage. It does not send survey data to a server or share it with anyone. Clearing browser data may remove saved responses.</div>
+   </div>
+  </div>
+ </section>
+
+ <section class="page" id="insights">
+  <div class="page-intro"><h2>Project insights</h2><p>Figures reproduced from the project report. They are presented as reported project data, not live or independently verified statistics.</p></div>
+  <div class="grid2">
+   <div class="panel"><h4>Types of fertilizers used</h4><p class="sub">Project-reported distribution</p>
+    <div class="barrow"><span>Organic</span><div class="track"><div class="fill" style="width:40%"></div></div><b>40%</b></div>
+    <div class="barrow"><span>Chemical</span><div class="track"><div class="fill" style="width:35%"></div></div><b>35%</b></div>
+    <div class="barrow"><span>Bio-fertilizers</span><div class="track"><div class="fill" style="width:15%"></div></div><b>15%</b></div>
+    <div class="barrow"><span>Mixed</span><div class="track"><div class="fill" style="width:10%"></div></div><b>10%</b></div>
+   </div>
+   <div class="panel"><h4>Awareness of smart fertilizer use</h4><p class="sub">Project-reported distribution</p>
+    <div class="barrow"><span>Aware</span><div class="track"><div class="fill" style="width:60%"></div></div><b>60%</b></div>
+    <div class="barrow"><span>Not aware</span><div class="track"><div class="fill" style="width:40%"></div></div><b>40%</b></div>
+    <div class="note">The report identifies a continuing need for farmer education and practical training.</div>
+   </div>
+   <div class="panel"><h4>Benefits observed</h4><p class="sub">Project-reported distribution</p>
+    <div class="barrow"><span>Higher yield</span><div class="track"><div class="fill" style="width:50%"></div></div><b>50%</b></div>
+    <div class="barrow"><span>Cost savings</span><div class="track"><div class="fill" style="width:25%"></div></div><b>25%</b></div>
+    <div class="barrow"><span>Better soil health</span><div class="track"><div class="fill" style="width:15%"></div></div><b>15%</b></div>
+    <div class="barrow"><span>No major change</span><div class="track"><div class="fill" style="width:10%"></div></div><b>10%</b></div>
+   </div>
+   <div class="panel"><h4>Barriers to adoption</h4><p class="sub">Project-reported distribution</p>
+    <div class="barrow"><span>High cost</span><div class="track"><div class="fill" style="width:40%"></div></div><b>40%</b></div>
+    <div class="barrow"><span>Low knowledge</span><div class="track"><div class="fill" style="width:30%"></div></div><b>30%</b></div>
+    <div class="barrow"><span>Availability</span><div class="track"><div class="fill" style="width:20%"></div></div><b>20%</b></div>
+    <div class="note">The report lists these barriers as reasons for limited adoption of smart fertilizers.</div>
+   </div>
+  </div>
+  <div class="panel" style="margin-top:15px"><h4>Land using smart vs. conventional fertilizers</h4><p class="sub">Project-reported distribution</p><div class="barrow"><span>Smart fertilizers</span><div class="track"><div class="fill" style="width:55%"></div></div><b>55%</b></div><div class="barrow"><span>Conventional</span><div class="track"><div class="fill" style="width:45%"></div></div><b>45%</b></div></div>
+ </section>
+
+ <section class="page" id="learn">
+  <div class="page-intro"><h2>Learning centre</h2><p>Core concepts and practices highlighted in the sustainable-farming project.</p></div>
+  <div class="grid2">
+   <div class="panel"><h4>Fertilizer options</h4><p class="sub">Understand the role of different nutrient sources.</p>
+    <div class="guide-list">
+     <div class="guide-item"><div class="n">🌿</div><div><b>Organic fertilizers</b><p>Compost and organic manure add organic matter and support soil structure.</p></div></div>
+     <div class="guide-item"><div class="n">🦠</div><div><b>Bio-fertilizers</b><p>Beneficial microorganisms can support nutrient availability and plant nutrition.</p></div></div>
+     <div class="guide-item"><div class="n">⏳</div><div><b>Slow-release fertilizers</b><p>Release nutrients gradually and can help reduce nutrient losses when properly selected and applied.</p></div></div>
+     <div class="guide-item"><div class="n">💧</div><div><b>Water-soluble fertilizers</b><p>Can be supplied through suitable irrigation systems such as drip fertigation when recommended.</p></div></div>
+    </div>
+   </div>
+   <div class="panel"><h4>Technology for smarter decisions</h4><p class="sub">Tools described in the project report.</p>
+    <div class="guide-list">
+     <div class="guide-item"><div class="n">🧪</div><div><b>Soil testing kits</b><p>Help identify existing nutrient levels and guide balanced nutrient management.</p></div></div>
+     <div class="guide-item"><div class="n">🛰️</div><div><b>GPS and drones</b><p>Can support precision mapping and targeted application.</p></div></div>
+     <div class="guide-item"><div class="n">📡</div><div><b>IoT sensors</b><p>Can monitor soil moisture and selected soil conditions in near real time.</p></div></div>
+     <div class="guide-item"><div class="n">📱</div><div><b>Farming apps</b><p>Can provide access to weather information, soil results and agricultural advisories.</p></div></div>
+    </div>
+   </div>
+  </div>
+  <div class="section-head"><div><h3>Good practices to adopt</h3><p>Simple actions that support long-term soil and water health.</p></div></div>
+  <div class="feature-grid">
+   <div class="feature"><div class="ficon">🔬</div><h4>Test before applying</h4><p>Use soil-test results instead of relying only on fixed quantities or guesswork.</p></div>
+   <div class="feature"><div class="ficon">🌱</div><h4>Build soil organic matter</h4><p>Where suitable, include compost, organic manure and crop rotation in farm planning.</p></div>
+   <div class="feature"><div class="ficon">🌧️</div><h4>Prevent runoff</h4><p>Follow recommended timing and placement; avoid application when heavy rain is expected.</p></div>
+  </div>
+ </section>
+
+ <section class="page" id="about">
+  <div class="page-intro"><h2>About the project</h2><p>Smart Fertilizer Use for Sustainable Farming</p></div>
+  <div class="panel"><h4>Project purpose</h4><p style="font-size:13px;color:#5e6d62">This community-focused project explores efficient fertilizer practices that protect soil health and the environment while supporting agricultural productivity. The report describes farmer interactions, a fertilizer-use survey, awareness activities and recommendations for sustainable nutrient management.</p>
+   <div class="fourr"><div><b>Focus</b><span>Balanced fertilizer use</span></div><div><b>Approach</b><span>Survey and awareness</span></div><div><b>Priority</b><span>Soil health</span></div><div><b>Outcome</b><span>Sustainable farming</span></div></div>
+  </div>
+  <div class="section-head"><div><h3>Recommendations from the report</h3><p>Short-term and long-term action areas.</p></div></div>
+  <div class="grid2">
+   <div class="panel"><h4>Short-term actions</h4><div class="guide-list">
+    <div class="guide-item"><div class="n">1</div><div><b>Awareness campaigns</b><p>Use posters, banners and community sessions to explain balanced fertilizer use.</p></div></div>
+    <div class="guide-item"><div class="n">2</div><div><b>Soil-testing drives</b><p>Organize accessible soil-health testing and explain the results.</p></div></div>
+    <div class="guide-item"><div class="n">3</div><div><b>Field demonstrations</b><p>Demonstrate composting and suitable organic or bio-fertilizer practices.</p></div></div>
+    <div class="guide-item"><div class="n">4</div><div><b>Local-language materials</b><p>Share practical guides on dosage, timing and safe use.</p></div></div>
+   </div></div>
+   <div class="panel"><h4>Long-term actions</h4><div class="guide-list">
+    <div class="guide-item"><div class="n">1</div><div><b>Agricultural information website</b><p>Provide crop-wise guidance, smart fertilizer information and scheme updates.</p></div></div>
+    <div class="guide-item"><div class="n">2</div><div><b>Farmer training groups</b><p>Work with agricultural universities and Krishi Vigyan Kendras.</p></div></div>
+    <div class="guide-item"><div class="n">3</div><div><b>Digital advisory tools</b><p>Encourage useful mobile apps and SMS-based advisory services.</p></div></div>
+    <div class="guide-item"><div class="n">4</div><div><b>Community composting</b><p>Promote composting units and farmer-to-farmer knowledge sharing.</p></div></div>
+   </div></div>
+  </div>
+ </section>
+ <footer style="padding:28px 3px 0;color:#829087;font-size:10px">AgriSmart · Educational demonstration application · Always follow soil-test results, product labels and qualified local agricultural advice.</footer>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const titles={overview:"Farming dashboard",planner:"Fertilizer quantity planner",survey:"Farmer practice survey",insights:"Project insights",learn:"Learning centre",about:"About the project"};
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id));document.getElementById('pageTitle').textContent=titles[id]||"AgriSmart";document.getElementById('sidebar').classList.remove('open');window.scrollTo({top:0,behavior:'smooth'});}
+document.querySelectorAll('.nav button[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('sidebar').classList.toggle('open'));
+document.getElementById('today').textContent=new Intl.DateTimeFormat(undefined,{day:'numeric',month:'short',year:'numeric'}).format(new Date());
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
+document.getElementById('calcBtn').addEventListener('click',()=>{
+ const a=Number(document.getElementById('area').value),r=Number(document.getElementById('rate').value),u=document.getElementById('unit').value,ru=document.getElementById('rateUnit').value,p=document.getElementById('product').value.trim();
+ if(!(a>0)||!(r>0)){toast('Enter a positive land area and advised rate.');return}
+ const sqm=u==='acre'?a*4046.8564224:u==='hectare'?a*10000:a;
+ const hectares=sqm/10000,acres=sqm/4046.8564224;
+ let kg=ru==='kg-ha'?r*hectares:ru==='kg-acre'?r*acres:(r*sqm)/1000;
+ const out=document.getElementById('calcResult');out.style.display='block';
+ out.innerHTML='<div style="font-size:11px;color:#627260">Estimated total product quantity '+(p?'for '+escapeHtml(p):'')+'</div><strong>'+kg.toLocaleString(undefined,{maximumFractionDigits:3})+' kg</strong><p>Equivalent to '+(kg*1000).toLocaleString(undefined,{maximumFractionDigits:1})+' grams for '+sqm.toLocaleString(undefined,{maximumFractionDigits:1})+' m² ('+hectares.toFixed(3)+' hectares).</p><p>Calculation only: based on the rate you entered. Confirm the recommendation, product label and application method before use.</p>';
+});
+document.getElementById('clearCalc').addEventListener('click',()=>{['area','rate','product'].forEach(id=>document.getElementById(id).value='');document.getElementById('unit').value='acre';document.getElementById('rateUnit').value='kg-ha';document.getElementById('calcResult').style.display='none'});
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+const KEY='agrismart_survey_v1';
+function getResponses(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return []}}
+function renderResponses(){const rows=document.getElementById('surveyRows'),data=getResponses();document.getElementById('responseCount').textContent=data.length;if(!data.length){rows.innerHTML='<tr><td colspan="3" class="empty">No responses yet.</td></tr>';return}rows.innerHTML=data.slice().reverse().slice(0,8).map(x=>'<tr><td>'+escapeHtml(x.crop)+'</td><td>'+escapeHtml(x.soil)+'</td><td>'+escapeHtml(x.aware)+'</td></tr>').join('')}
+document.getElementById('surveyForm').addEventListener('submit',e=>{
+ e.preventDefault();const f=e.currentTarget;const val=n=>f.querySelector('[name="'+n+'"]:checked')?.value||'';
+ const record={crop:document.getElementById('crop').value,fertilizer:val('fert'),aware:val('aware'),soil:val('soil'),basis:val('basis'),method:val('method'),sustainable:val('sustain'),comments:document.getElementById('comments').value.trim(),date:new Date().toISOString()};
+ const data=getResponses();data.push(record);localStorage.setItem(KEY,JSON.stringify(data));f.reset();renderResponses();toast('Survey response saved on this device.');
+});
+document.getElementById('clearSurvey').addEventListener('click',()=>{if(confirm('Delete all locally saved survey responses?')){localStorage.removeItem(KEY);renderResponses();toast('Local responses cleared.')}});
+document.getElementById('exportCsv').addEventListener('click',()=>{const data=getResponses();if(!data.length){toast('There are no responses to export.');return}const cols=['date','crop','fertilizer','aware','soil','basis','method','sustainable','comments'];const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';const csv=[cols.join(','),...data.map(r=>cols.map(c=>q(r[c])).join(','))].join('\r\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='agrismart-survey-responses.csv';a.click();URL.revokeObjectURL(url);toast('CSV export prepared.')});
+renderResponses();
+
+// AgriSmart language and voice layer
+const agriTranslations = {
+te: {
+"Farming dashboard":"వ్యవసాయ డాష్‌బోర్డ్","Overview":"సారాంశం","Fertilizer planner":"ఎరువుల ప్రణాళిక","Farmer survey":"రైతుల సర్వే","Project insights":"ప్రాజెక్ట్ వివరాలు","Learning centre":"అభ్యాస కేంద్రం","About the project":"ప్రాజెక్ట్ గురించి","Workspace":"పని ప్రదేశం","About":"గురించి","Language":"భాష","Listen":"వినండి","Stop":"ఆపండి","Soil-first approach":"నేల ఆరోగ్యానికి ప్రాధాన్యం",
+"Agriculture • Sustainability":"వ్యవసాయం • సుస్థిరత","Grow better. Waste less.":"మెరుగ్గా పండించండి. వృథా తగ్గించండి.","Smarter fertilizer use starts with healthier soil.":"ఆరోగ్యకరమైన నేలతోనే ఎరువుల సమర్థ వినియోగం ప్రారంభమవుతుంది.","Explore practical ways to match nutrients to crop needs, reduce unnecessary inputs and protect the environment.":"పంట అవసరాలకు తగిన పోషకాలను అందించడం, అనవసర ఖర్చులు తగ్గించడం, పర్యావరణాన్ని కాపాడే పద్ధతులను తెలుసుకోండి.","Open fertilizer planner →":"ఎరువుల ప్రణాళిక తెరవండి →","Explore smart practices":"స్మార్ట్ పద్ధతులను తెలుసుకోండి",
+"Organic fertilizers":"సేంద్రియ ఎరువులు","Smart-fertilizer awareness":"స్మార్ట్ ఎరువులపై అవగాహన","Reported cost barrier":"నివేదించిన ఖర్చు సమస్య","Land using smart fertilizers":"స్మార్ట్ ఎరువులు వాడుతున్న భూమి","Project-reported survey figure":"ప్రాజెక్ట్ సర్వేలో నివేదించిన గణాంకం","What smart fertilizer management means":"స్మార్ట్ ఎరువుల నిర్వహణ అంటే ఏమిటి","Four practical decisions for efficient nutrient use.":"పోషకాల సమర్థ వినియోగానికి నాలుగు ముఖ్య నిర్ణయాలు.","The 4R nutrient stewardship principle":"పోషకాల నిర్వహణలో 4R సూత్రం","Use the right nutrient source, in the right quantity, at the right time and in the right place.":"సరైన పోషక వనరును, సరైన పరిమాణంలో, సరైన సమయంలో, సరైన చోట ఉపయోగించండి.","01 · Right Source":"01 · సరైన వనరు","02 · Right Rate":"02 · సరైన మోతాదు","03 · Right Time":"03 · సరైన సమయం","04 · Right Place":"04 · సరైన స్థానం","Choose a nutrient source suited to the crop and soil.":"పంటకు, నేలకు సరిపోయే పోషక వనరును ఎంచుకోండి.","Match the quantity to soil-test and crop needs.":"నేల పరీక్ష, పంట అవసరాలకు అనుగుణంగా పరిమాణాన్ని నిర్ణయించండి.","Apply nutrients when the crop can use them.":"పంట పోషకాలను గ్రహించగల సమయంలో వేయండి.","Place nutrients where roots can access them.":"వేర్లు అందుకునే చోట పోషకాలను వేయండి.","Explore the toolkit":"సాధనాలను పరిశీలించండి","Simple tools and knowledge for sustainable farm decisions.":"సుస్థిర వ్యవసాయ నిర్ణయాలకు ఉపయోగపడే సాధనాలు, సమాచారం.",
+"Soil-health first":"నేల ఆరోగ్యమే మొదటి ప్రాధాన్యం","Understand existing nutrient levels before deciding what to apply.":"ఏ ఎరువు వేయాలో నిర్ణయించే ముందు నేలలోని పోషక స్థాయిలను తెలుసుకోండి.","Area-based planning":"విస్తీర్ణం ఆధారిత ప్రణాళిక","Calculate total product quantity from an advised rate and field area.":"సూచించిన మోతాదు, పొలం విస్తీర్ణం ఆధారంగా మొత్తం ఎరువు పరిమాణాన్ని లెక్కించండి.","Sustainable inputs":"సుస్థిర వ్యవసాయ ఇన్‌పుట్లు","Learn about compost, bio-fertilizers and slow-release options.":"కంపోస్ట్, జీవ ఎరువులు, నెమ్మదిగా విడుదలయ్యే ఎరువుల గురించి తెలుసుకోండి.",
+"Fertilizer quantity planner":"ఎరువుల పరిమాణం లెక్కింపు","Estimate total product quantity using a rate from a soil-test recommendation or qualified agricultural adviser.":"నేల పరీక్ష లేదా వ్యవసాయ నిపుణుడు సూచించిన మోతాదు ఆధారంగా మొత్తం ఎరువు పరిమాణాన్ని అంచనా వేయండి.","Enter field and recommendation details":"పొలం, సిఫార్సు వివరాలను నమోదు చేయండి","This tool performs area and quantity arithmetic only.":"ఈ సాధనం విస్తీర్ణం, పరిమాణ గణన మాత్రమే చేస్తుంది.","Land area":"భూమి విస్తీర్ణం","Area unit":"విస్తీర్ణ ప్రమాణం","Acres":"ఎకరాలు","Hectares":"హెక్టార్లు","Square metres":"చదరపు మీటర్లు","Advised fertilizer rate":"సూచించిన ఎరువు మోతాదు","Rate unit":"మోతాదు ప్రమాణం","kg per hectare":"హెక్టారుకు కిలోలు","kg per acre":"ఎకరాకు కిలోలు","grams per square metre":"చదరపు మీటరుకు గ్రాములు","Fertilizer / product name (optional)":"ఎరువు / ఉత్పత్తి పేరు (ఐచ్ఛికం)","Calculate quantity":"పరిమాణం లెక్కించండి","Clear":"తొలగించండి","Before applying fertilizer":"ఎరువు వేయడానికి ముందు","Use the result as a planning estimate, not as a crop recommendation.":"ఈ ఫలితాన్ని ప్రణాళిక అంచనాగా మాత్రమే చూడండి; పంట సిఫార్సుగా కాదు.","Get the soil tested":"నేల పరీక్ష చేయించండి","Check the soil nutrient profile and soil-health card.":"నేల పోషక స్థాయిలు, సాయిల్ హెల్త్ కార్డును పరిశీలించండి.","Confirm crop requirements":"పంట అవసరాలను నిర్ధారించండి","Use crop- and growth-stage-specific guidance from an agricultural expert.":"పంట, ఎదుగుదల దశకు అనుగుణంగా వ్యవసాయ నిపుణుడి సూచనలు పాటించండి.","Check the product label":"ఉత్పత్తి లేబుల్‌ను పరిశీలించండి","Confirm nutrient concentration, application method and safety instructions.":"పోషకాల శాతం, వాడే విధానం, భద్రతా సూచనలను నిర్ధారించండి.","Record each application":"ప్రతి ఎరువు వినియోగాన్ని నమోదు చేయండి","Track date, field, product and quantity for future planning.":"తేదీ, పొలం, ఉత్పత్తి, పరిమాణాన్ని భవిష్యత్ ప్రణాళిక కోసం నమోదు చేయండి.","Important: No universal fertilizer dosage is suitable for every crop or soil. Do not use this calculator to decide the recommended rate. Enter a rate already provided by a current soil test or qualified local adviser.":"ముఖ్యం: ప్రతి పంటకు లేదా నేలకు ఒకే ఎరువు మోతాదు సరిపోదు. సిఫార్సు మోతాదును నిర్ణయించడానికి ఈ లెక్కింపును ఉపయోగించవద్దు. తాజా నేల పరీక్ష లేదా అర్హతగల స్థానిక నిపుణుడు సూచించిన మోతాదునే నమోదు చేయండి.",
+"Farmer practice survey":"రైతుల వ్యవసాయ పద్ధతుల సర్వే","Record fertilizer practices and awareness. Responses are saved only in this browser on this device.":"ఎరువుల వినియోగ పద్ధతులు, అవగాహనను నమోదు చేయండి. సమాధానాలు ఈ పరికరంలోని బ్రౌజర్‌లో మాత్రమే భద్రపరచబడతాయి.","Survey questionnaire":"సర్వే ప్రశ్నావళి","No name, phone number or personal identifier is requested.":"పేరు, ఫోన్ నంబర్ లేదా వ్యక్తిగత గుర్తింపు వివరాలు అడగబడవు.","Which crop do you mainly grow?":"మీరు ప్రధానంగా ఏ పంట సాగు చేస్తున్నారు?","Choose a crop":"పంటను ఎంచుకోండి","Paddy":"వరి","Maize":"మొక్కజొన్న","Vegetables":"కూరగాయలు","Fruits":"పండ్లు","Sugarcane":"చెరకు","Pulses":"పప్పుధాన్యాలు","Other":"ఇతర","What type of fertilizer do you commonly use?":"మీరు సాధారణంగా ఏ రకమైన ఎరువును వాడతారు?","Are you aware of smart fertilizers?":"స్మార్ట్ ఎరువుల గురించి మీకు తెలుసా?","Do you test soil before applying fertilizer?":"ఎరువు వేయడానికి ముందు నేల పరీక్ష చేయిస్తారా?","How do you decide the quantity?":"ఎరువు పరిమాణాన్ని ఎలా నిర్ణయిస్తారు?","How do you apply fertilizer?":"ఎరువును ఎలా వేస్తారు?","Do you think smart fertilizers support sustainable farming?":"స్మార్ట్ ఎరువులు సుస్థిర వ్యవసాయానికి తోడ్పడతాయని భావిస్తున్నారా?","Main challenge or comment (optional)":"ప్రధాన సమస్య లేదా అభిప్రాయం (ఐచ్ఛికం)","Save survey response":"సర్వే సమాధానాన్ని భద్రపరచండి","Reset form":"ఫారమ్‌ను రీసెట్ చేయండి","Collected responses":"సేకరించిన సమాధానాలు","Responses saved in this browser.":"ఈ బ్రౌజర్‌లో భద్రపరచిన సమాధానాలు.","Total responses":"మొత్తం సమాధానాలు","Locally stored entries":"పరికరంలో భద్రపరిచిన నమోదులు","Export CSV":"CSV ఎగుమతి","Clear responses":"సమాధానాలను తొలగించండి","Crop":"పంట","Soil test":"నేల పరీక్ష","Awareness":"అవగాహన","No responses yet.":"ఇంకా సమాధానాలు లేవు.","Privacy: this demo stores entries in browser local storage. It does not send survey data to a server or share it with anyone. Clearing browser data may remove saved responses.":"గోప్యత: ఈ నమూనా వివరాలను బ్రౌజర్‌లో మాత్రమే భద్రపరుస్తుంది. సర్వర్‌కు పంపదు లేదా ఇతరులతో పంచుకోదు. బ్రౌజర్ డేటాను తొలగిస్తే సమాధానాలు పోవచ్చు.",
+"Project insights":"ప్రాజెక్ట్ వివరాలు","Figures reproduced from the project report. They are presented as reported project data, not live or independently verified statistics.":"ప్రాజెక్ట్ నివేదికలోని గణాంకాలు ఇక్కడ చూపబడ్డాయి. ఇవి నివేదించిన సమాచారం మాత్రమే; ప్రత్యక్షంగా లేదా స్వతంత్రంగా ధృవీకరించిన గణాంకాలు కావు.","Types of fertilizers used":"వాడిన ఎరువుల రకాలు","Project-reported distribution":"ప్రాజెక్ట్ నివేదికలోని పంపిణీ","Organic":"సేంద్రియ","Chemical":"రసాయన","Bio-fertilizers":"జీవ ఎరువులు","Mixed":"మిశ్రమం","Awareness of smart fertilizer use":"స్మార్ట్ ఎరువుల వినియోగంపై అవగాహన","Aware":"అవగాహన ఉంది","Not aware":"అవగాహన లేదు","The report identifies a continuing need for farmer education and practical training.":"రైతులకు అవగాహన, ప్రాయోగిక శిక్షణ అవసరమని నివేదిక సూచిస్తోంది.","Benefits observed":"గమనించిన ప్రయోజనాలు","Higher yield":"అధిక దిగుబడి","Cost savings":"ఖర్చు ఆదా","Better soil health":"మెరుగైన నేల ఆరోగ్యం","No major change":"గణనీయమైన మార్పు లేదు","Barriers to adoption":"అమలులో అడ్డంకులు","High cost":"అధిక ఖర్చు","Low knowledge":"తక్కువ అవగాహన","Availability":"లభ్యత","The report lists these barriers as reasons for limited adoption of smart fertilizers.":"స్మార్ట్ ఎరువుల వినియోగం పరిమితంగా ఉండటానికి ఈ అడ్డంకులే కారణాలని నివేదిక పేర్కొంది.","Land using smart vs. conventional fertilizers":"స్మార్ట్, సంప్రదాయ ఎరువులు వాడుతున్న భూమి","Smart fertilizers":"స్మార్ట్ ఎరువులు","Conventional":"సంప్రదాయ",
+"Learning centre":"అభ్యాస కేంద్రం","Core concepts and practices highlighted in the sustainable-farming project.":"సుస్థిర వ్యవసాయ ప్రాజెక్ట్‌లో ప్రాధాన్యం ఇచ్చిన ముఖ్య భావనలు, పద్ధతులు.","Fertilizer options":"ఎరువుల ఎంపికలు","Understand the role of different nutrient sources.":"వివిధ పోషక వనరుల పాత్రను అర్థం చేసుకోండి.","Organic manure":"సేంద్రియ ఎరువు","Slow-release fertilizers":"నెమ్మదిగా విడుదలయ్యే ఎరువులు","Water-soluble fertilizers":"నీటిలో కరిగే ఎరువులు","Technology for smarter decisions":"మెరుగైన నిర్ణయాలకు సాంకేతికత","Tools described in the project report.":"ప్రాజెక్ట్ నివేదికలో వివరించిన సాధనాలు.","Soil testing kits":"నేల పరీక్ష కిట్లు","GPS and drones":"GPS, డ్రోన్లు","IoT sensors":"IoT సెన్సర్లు","Farming apps":"వ్యవసాయ యాప్‌లు","Good practices to adopt":"అనుసరించాల్సిన మంచి పద్ధతులు","Simple actions that support long-term soil and water health.":"నేల, నీటి ఆరోగ్యాన్ని దీర్ఘకాలం కాపాడే సులభమైన చర్యలు.","Test before applying":"వేసే ముందు పరీక్షించండి","Build soil organic matter":"నేలలో సేంద్రియ పదార్థాన్ని పెంచండి","Prevent runoff":"ఎరువులు కొట్టుకుపోకుండా చూడండి",
+"About the project":"ప్రాజెక్ట్ గురించి","Smart Fertilizer Use for Sustainable Farming":"సుస్థిర వ్యవసాయం కోసం స్మార్ట్ ఎరువుల వినియోగం","Project purpose":"ప్రాజెక్ట్ లక్ష్యం","Recommendations from the report":"నివేదికలోని సిఫార్సులు","Short-term actions":"స్వల్పకాలిక చర్యలు","Long-term actions":"దీర్ఘకాలిక చర్యలు","Awareness campaigns":"అవగాహన కార్యక్రమాలు","Soil-testing drives":"నేల పరీక్ష కార్యక్రమాలు","Field demonstrations":"పొలంలో ప్రదర్శనలు","Local-language materials":"స్థానిక భాషా సమాచార పత్రాలు","Agricultural information website":"వ్యవసాయ సమాచార వెబ్‌సైట్","Farmer training groups":"రైతుల శిక్షణ బృందాలు","Digital advisory tools":"డిజిటల్ సలహా సాధనాలు","Community composting":"సామూహిక కంపోస్టింగ్","Focus":"ప్రధాన అంశం","Approach":"విధానం","Priority":"ప్రాధాన్యత","Outcome":"ఫలితం","Balanced fertilizer use":"సమతుల్య ఎరువుల వినియోగం","Survey and awareness":"సర్వే, అవగాహన","Soil health":"నేల ఆరోగ్యం","Sustainable farming":"సుస్థిర వ్యవసాయం",
+"Yes":"అవును","No":"కాదు","Not sure":"ఖచ్చితంగా తెలియదు","Urea":"యూరియా","DAP":"డీఏపీ","Organic compost":"సేంద్రియ కంపోస్ట్","Experience":"అనుభవం","Expert advice":"నిపుణుల సలహా","Guess":"అంచనా","Manual spreading":"చేతితో చల్లడం","Drip irrigation":"బిందు సేద్యం","Spray":"పిచికారీ","Machinery":"యంత్రాలు","Listen to this page":"ఈ పేజీని వినండి","Speech is not supported in this browser.":"ఈ బ్రౌజర్‌లో వాయిస్ సౌకర్యం లేదు.","Speaking is not available. Please check your browser language voices.":"వాయిస్ అందుబాటులో లేదు. బ్రౌజర్‌లో భాషా వాయిస్‌లను పరిశీలించండి."
+},
+hi: {
+"Farming dashboard":"खेती डैशबोर्ड","Overview":"अवलोकन","Fertilizer planner":"उर्वरक योजना","Farmer survey":"किसान सर्वेक्षण","Project insights":"परियोजना की जानकारी","Learning centre":"सीखने का केंद्र","About the project":"परियोजना के बारे में","Workspace":"कार्य क्षेत्र","About":"परिचय","Language":"भाषा","Listen":"सुनें","Stop":"रोकें","Soil-first approach":"मिट्टी को प्राथमिकता",
+"Agriculture • Sustainability":"कृषि • स्थिरता","Grow better. Waste less.":"बेहतर उगाएँ। बर्बादी घटाएँ।","Smarter fertilizer use starts with healthier soil.":"बेहतर उर्वरक उपयोग की शुरुआत स्वस्थ मिट्टी से होती है।","Explore practical ways to match nutrients to crop needs, reduce unnecessary inputs and protect the environment.":"फसल की जरूरत के अनुसार पोषक तत्व देने, अनावश्यक खर्च घटाने और पर्यावरण बचाने के व्यावहारिक तरीके जानें।","Open fertilizer planner →":"उर्वरक योजना खोलें →","Explore smart practices":"स्मार्ट तरीके जानें",
+"Organic fertilizers":"जैविक उर्वरक","Smart-fertilizer awareness":"स्मार्ट उर्वरकों के प्रति जागरूकता","Reported cost barrier":"बताई गई लागत की बाधा","Land using smart fertilizers":"स्मार्ट उर्वरक उपयोग वाली भूमि","Project-reported survey figure":"परियोजना सर्वेक्षण में बताई गई संख्या","What smart fertilizer management means":"स्मार्ट उर्वरक प्रबंधन का अर्थ","Four practical decisions for efficient nutrient use.":"पोषक तत्वों के कुशल उपयोग के चार व्यावहारिक निर्णय।","The 4R nutrient stewardship principle":"पोषक तत्व प्रबंधन का 4R सिद्धांत","Use the right nutrient source, in the right quantity, at the right time and in the right place.":"सही पोषक स्रोत, सही मात्रा, सही समय और सही स्थान चुनें।","01 · Right Source":"01 · सही स्रोत","02 · Right Rate":"02 · सही मात्रा","03 · Right Time":"03 · सही समय","04 · Right Place":"04 · सही स्थान","Choose a nutrient source suited to the crop and soil.":"फसल और मिट्टी के अनुकूल पोषक स्रोत चुनें।","Match the quantity to soil-test and crop needs.":"मिट्टी की जांच और फसल की जरूरत के अनुसार मात्रा तय करें।","Apply nutrients when the crop can use them.":"पोषक तत्व तब डालें जब फसल उनका उपयोग कर सके।","Place nutrients where roots can access them.":"पोषक तत्व वहां डालें जहां जड़ें उन्हें प्राप्त कर सकें।","Explore the toolkit":"उपकरण देखें","Simple tools and knowledge for sustainable farm decisions.":"टिकाऊ खेती के फैसलों के लिए सरल उपकरण और जानकारी।",
+"Soil-health first":"मिट्टी का स्वास्थ्य पहले","Understand existing nutrient levels before deciding what to apply.":"उर्वरक तय करने से पहले मिट्टी में पोषक तत्वों का स्तर जानें।","Area-based planning":"क्षेत्र के आधार पर योजना","Calculate total product quantity from an advised rate and field area.":"बताई गई दर और खेत के क्षेत्रफल से कुल मात्रा निकालें।","Sustainable inputs":"टिकाऊ कृषि सामग्री","Learn about compost, bio-fertilizers and slow-release options.":"कम्पोस्ट, जैव उर्वरक और धीरे-धीरे घुलने वाले विकल्प जानें।",
+"Fertilizer quantity planner":"उर्वरक मात्रा कैलकुलेटर","Estimate total product quantity using a rate from a soil-test recommendation or qualified agricultural adviser.":"मिट्टी जांच या योग्य कृषि सलाहकार की बताई दर से कुल उर्वरक मात्रा का अनुमान लगाएं।","Enter field and recommendation details":"खेत और सलाह का विवरण भरें","This tool performs area and quantity arithmetic only.":"यह उपकरण केवल क्षेत्रफल और मात्रा की गणना करता है।","Land area":"भूमि का क्षेत्रफल","Area unit":"क्षेत्रफल की इकाई","Acres":"एकड़","Hectares":"हेक्टेयर","Square metres":"वर्ग मीटर","Advised fertilizer rate":"सलाह दी गई उर्वरक दर","Rate unit":"दर की इकाई","kg per hectare":"किलो प्रति हेक्टेयर","kg per acre":"किलो प्रति एकड़","grams per square metre":"ग्राम प्रति वर्ग मीटर","Fertilizer / product name (optional)":"उर्वरक / उत्पाद का नाम (वैकल्पिक)","Calculate quantity":"मात्रा निकालें","Clear":"साफ़ करें","Before applying fertilizer":"उर्वरक डालने से पहले","Use the result as a planning estimate, not as a crop recommendation.":"परिणाम को केवल योजना का अनुमान मानें, फसल की सिफारिश नहीं।","Get the soil tested":"मिट्टी की जांच कराएं","Check the soil nutrient profile and soil-health card.":"मिट्टी के पोषक तत्व और मृदा स्वास्थ्य कार्ड देखें।","Confirm crop requirements":"फसल की जरूरत की पुष्टि करें","Use crop- and growth-stage-specific guidance from an agricultural expert.":"कृषि विशेषज्ञ से फसल और विकास अवस्था के अनुसार सलाह लें।","Check the product label":"उत्पाद का लेबल देखें","Confirm nutrient concentration, application method and safety instructions.":"पोषक तत्व की मात्रा, उपयोग विधि और सुरक्षा निर्देश जांचें।","Record each application":"हर उपयोग का रिकॉर्ड रखें","Track date, field, product and quantity for future planning.":"भविष्य की योजना के लिए तारीख, खेत, उत्पाद और मात्रा लिखें।","Important: No universal fertilizer dosage is suitable for every crop or soil. Do not use this calculator to decide the recommended rate. Enter a rate already provided by a current soil test or qualified local adviser.":"महत्वपूर्ण: हर फसल या मिट्टी के लिए एक ही उर्वरक मात्रा सही नहीं होती। अनुशंसित दर तय करने के लिए इस कैलकुलेटर का उपयोग न करें। केवल हाल की मिट्टी जांच या योग्य स्थानीय सलाहकार द्वारा बताई गई दर भरें।",
+"Farmer practice survey":"किसान कृषि पद्धति सर्वेक्षण","Record fertilizer practices and awareness. Responses are saved only in this browser on this device.":"उर्वरक उपयोग और जागरूकता दर्ज करें। जवाब केवल इसी डिवाइस के ब्राउज़र में सहेजे जाते हैं।","Survey questionnaire":"सर्वेक्षण प्रश्नावली","No name, phone number or personal identifier is requested.":"नाम, फोन नंबर या व्यक्तिगत पहचान नहीं मांगी जाती।","Which crop do you mainly grow?":"आप मुख्य रूप से कौन सी फसल उगाते हैं?","Choose a crop":"फसल चुनें","Paddy":"धान","Maize":"मक्का","Vegetables":"सब्जियां","Fruits":"फल","Sugarcane":"गन्ना","Pulses":"दलहन","Other":"अन्य","What type of fertilizer do you commonly use?":"आप आमतौर पर किस प्रकार का उर्वरक उपयोग करते हैं?","Are you aware of smart fertilizers?":"क्या आप स्मार्ट उर्वरकों के बारे में जानते हैं?","Do you test soil before applying fertilizer?":"क्या उर्वरक डालने से पहले मिट्टी की जांच कराते हैं?","How do you decide the quantity?":"मात्रा कैसे तय करते हैं?","How do you apply fertilizer?":"उर्वरक कैसे डालते हैं?","Do you think smart fertilizers support sustainable farming?":"क्या आपको लगता है कि स्मार्ट उर्वरक टिकाऊ खेती में मदद करते हैं?","Main challenge or comment (optional)":"मुख्य समस्या या टिप्पणी (वैकल्पिक)","Save survey response":"सर्वेक्षण जवाब सहेजें","Reset form":"फॉर्म रीसेट करें","Collected responses":"एकत्रित जवाब","Responses saved in this browser.":"इस ब्राउज़र में सहेजे गए जवाब।","Total responses":"कुल जवाब","Locally stored entries":"डिवाइस में सहेजी गई प्रविष्टियां","Export CSV":"CSV निर्यात करें","Clear responses":"जवाब हटाएं","Crop":"फसल","Soil test":"मिट्टी जांच","Awareness":"जागरूकता","No responses yet.":"अभी कोई जवाब नहीं है।","Privacy: this demo stores entries in browser local storage. It does not send survey data to a server or share it with anyone. Clearing browser data may remove saved responses.":"गोपनीयता: यह नमूना जानकारी को ब्राउज़र में ही सहेजता है। सर्वेक्षण डेटा सर्वर पर नहीं भेजा जाता और किसी से साझा नहीं होता। ब्राउज़र डेटा हटाने पर जवाब मिट सकते हैं।",
+"Project insights":"परियोजना की जानकारी","Figures reproduced from the project report. They are presented as reported project data, not live or independently verified statistics.":"ये आंकड़े परियोजना रिपोर्ट से लिए गए हैं। ये रिपोर्ट किए गए आंकड़े हैं, लाइव या स्वतंत्र रूप से सत्यापित आंकड़े नहीं।","Types of fertilizers used":"उपयोग किए गए उर्वरकों के प्रकार","Project-reported distribution":"परियोजना रिपोर्ट का वितरण","Organic":"जैविक","Chemical":"रासायनिक","Bio-fertilizers":"जैव उर्वरक","Mixed":"मिश्रित","Awareness of smart fertilizer use":"स्मार्ट उर्वरक उपयोग की जागरूकता","Aware":"जानकारी है","Not aware":"जानकारी नहीं","The report identifies a continuing need for farmer education and practical training.":"रिपोर्ट के अनुसार किसानों की शिक्षा और व्यावहारिक प्रशिक्षण की जरूरत बनी हुई है।","Benefits observed":"देखे गए लाभ","Higher yield":"अधिक उपज","Cost savings":"लागत में बचत","Better soil health":"मिट्टी का बेहतर स्वास्थ्य","No major change":"कोई बड़ा बदलाव नहीं","Barriers to adoption":"अपनाने में बाधाएं","High cost":"अधिक लागत","Low knowledge":"कम जानकारी","Availability":"उपलब्धता","The report lists these barriers as reasons for limited adoption of smart fertilizers.":"रिपोर्ट के अनुसार इन बाधाओं के कारण स्मार्ट उर्वरकों का उपयोग सीमित है।","Land using smart vs. conventional fertilizers":"स्मार्ट और पारंपरिक उर्वरक उपयोग वाली भूमि","Smart fertilizers":"स्मार्ट उर्वरक","Conventional":"पारंपरिक",
+"Learning centre":"सीखने का केंद्र","Core concepts and practices highlighted in the sustainable-farming project.":"टिकाऊ खेती परियोजना में बताए गए मुख्य विचार और तरीके।","Fertilizer options":"उर्वरक विकल्प","Understand the role of different nutrient sources.":"विभिन्न पोषक स्रोतों की भूमिका समझें।","Organic manure":"जैविक खाद","Slow-release fertilizers":"धीरे-धीरे घुलने वाले उर्वरक","Water-soluble fertilizers":"पानी में घुलनशील उर्वरक","Technology for smarter decisions":"बेहतर निर्णयों के लिए तकनीक","Tools described in the project report.":"परियोजना रिपोर्ट में बताए गए उपकरण।","Soil testing kits":"मिट्टी जांच किट","GPS and drones":"GPS और ड्रोन","IoT sensors":"IoT सेंसर","Farming apps":"खेती के ऐप","Good practices to adopt":"अपनाने योग्य अच्छी पद्धतियां","Simple actions that support long-term soil and water health.":"मिट्टी और पानी के दीर्घकालिक स्वास्थ्य के लिए सरल कदम।","Test before applying":"डालने से पहले जांचें","Build soil organic matter":"मिट्टी में जैविक पदार्थ बढ़ाएं","Prevent runoff":"बहाव रोकें",
+"Smart Fertilizer Use for Sustainable Farming":"टिकाऊ खेती के लिए स्मार्ट उर्वरक उपयोग","Project purpose":"परियोजना का उद्देश्य","Recommendations from the report":"रिपोर्ट की सिफारिशें","Short-term actions":"अल्पकालिक कदम","Long-term actions":"दीर्घकालिक कदम","Awareness campaigns":"जागरूकता अभियान","Soil-testing drives":"मिट्टी जांच अभियान","Field demonstrations":"खेत में प्रदर्शन","Local-language materials":"स्थानीय भाषा की सामग्री","Agricultural information website":"कृषि जानकारी वेबसाइट","Farmer training groups":"किसान प्रशिक्षण समूह","Digital advisory tools":"डिजिटल सलाह उपकरण","Community composting":"सामुदायिक कम्पोस्टिंग","Focus":"मुख्य विषय","Approach":"तरीका","Priority":"प्राथमिकता","Outcome":"परिणाम","Balanced fertilizer use":"संतुलित उर्वरक उपयोग","Survey and awareness":"सर्वेक्षण और जागरूकता","Soil health":"मिट्टी का स्वास्थ्य","Sustainable farming":"टिकाऊ खेती",
+"Yes":"हाँ","No":"नहीं","Not sure":"पक्का नहीं","Urea":"यूरिया","DAP":"डीएपी","Organic compost":"जैविक कम्पोस्ट","Experience":"अनुभव","Expert advice":"विशेषज्ञ की सलाह","Guess":"अनुमान","Manual spreading":"हाथ से छिड़काव","Drip irrigation":"ड्रिप सिंचाई","Spray":"छिड़काव","Machinery":"मशीनरी","Listen to this page":"इस पृष्ठ को सुनें","Speech is not supported in this browser.":"इस ब्राउज़र में आवाज़ की सुविधा उपलब्ध नहीं है।","Speaking is not available. Please check your browser language voices.":"आवाज़ उपलब्ध नहीं है। कृपया ब्राउज़र की भाषा वॉइस जांचें।"
+}
+};
+let agriCurrentLanguage = localStorage.getItem('agrismart_language') || 'en';
+function agriTranslatePage(lang) {
+  agriCurrentLanguage = lang;
+  document.documentElement.lang = lang === 'te' ? 'te-IN' : lang === 'hi' ? 'hi-IN' : 'en';
+  localStorage.setItem('agrismart_language', lang);
+  const dict = agriTranslations[lang] || {};
+  // Restore original text before applying the selected dictionary.
+  document.querySelectorAll('[data-agri-original]').forEach(el => {
+    if (el.dataset.agriType === 'text') el.textContent = el.dataset.agriOriginal;
+    else if (el.dataset.agriType === 'placeholder') el.setAttribute('placeholder', el.dataset.agriOriginal);
+    else if (el.dataset.agriType === 'title') el.setAttribute('title', el.dataset.agriOriginal);
+  });
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  // Restore each text node to its English source before applying another language.
+  nodes.forEach(node => { if (node.__agriOriginal !== undefined) node.nodeValue = node.__agriOriginal; });
+  nodes.forEach(node => {
+    const original = node.nodeValue;
+    const key = original.trim();
+    if (!key || !dict[key]) return;
+    const parent = node.parentElement;
+    if (!parent || ['SCRIPT','STYLE'].includes(parent.tagName)) return;
+    if (!node.__agriOriginal) node.__agriOriginal = original;
+    node.nodeValue = original.replace(key, dict[key]);
+  });
+  document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
+    if (!el.dataset.agriOriginal) el.dataset.agriOriginal = el.getAttribute('placeholder');
+    const original = el.dataset.agriOriginal;
+    if (dict[original]) el.setAttribute('placeholder', dict[original]);
+  });
+  document.querySelectorAll('[title]').forEach(el => {
+    if (!el.dataset.agriTitleOriginal) el.dataset.agriTitleOriginal = el.title;
+    if (dict[el.dataset.agriTitleOriginal]) el.title = dict[el.dataset.agriTitleOriginal];
+  });
+  document.querySelectorAll('#unit option,#rateUnit option,#crop option').forEach(el => {
+    if (!el.dataset.agriOptionOriginal) el.dataset.agriOptionOriginal = el.textContent;
+    if (dict[el.dataset.agriOptionOriginal]) el.textContent = dict[el.dataset.agriOptionOriginal];
+  });
+  const labels = document.getElementById('languageLabel');
+  const listen = document.getElementById('speakLabel');
+  const stop = document.getElementById('stopLabel');
+  if (labels) labels.textContent = lang === 'te' ? 'భాష' : lang === 'hi' ? 'भाषा' : 'Language';
+  if (listen) listen.textContent = lang === 'te' ? 'వినండి' : lang === 'hi' ? 'सुनें' : 'Listen';
+  if (stop) stop.textContent = lang === 'te' ? 'ఆపండి' : lang === 'hi' ? 'रोकें' : 'Stop';
+  const title = document.getElementById('pageTitle');
+  if (title) {
+    const key = titles[document.querySelector('.page.active')?.id] || 'Farming dashboard';
+    title.textContent = dict[key] || key;
+  }
+}
+function agriSpeak() {
+  if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+    toast(agriCurrentLanguage === 'te' ? 'ఈ బ్రౌజర్‌లో వాయిస్ సౌకర్యం లేదు.' : agriCurrentLanguage === 'hi' ? 'इस ब्राउज़र में आवाज़ की सुविधा उपलब्ध नहीं है।' : 'Speech is not supported in this browser.');
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const active = document.querySelector('.page.active');
+  const textToRead = (active || document.body).innerText.replace(/\s+/g,' ').trim();
+  const utterance = new SpeechSynthesisUtterance(textToRead);
+  const locale = agriCurrentLanguage === 'te' ? 'te-IN' : agriCurrentLanguage === 'hi' ? 'hi-IN' : 'en-IN';
+  utterance.lang = locale;
+  utterance.rate = 0.92;
+  utterance.pitch = 1;
+  const voices = window.speechSynthesis.getVoices();
+  const matching = voices.find(v => v.lang.toLowerCase() === locale.toLowerCase()) ||
+                   voices.find(v => v.lang.toLowerCase().startsWith(locale.slice(0,2)));
+  if (matching) utterance.voice = matching;
+  utterance.onerror = () => toast(agriCurrentLanguage === 'te' ? 'వాయిస్ ప్లే కాలేదు. బ్రౌజర్‌లో తెలుగు వాయిస్ ఉందో చూడండి.' : agriCurrentLanguage === 'hi' ? 'आवाज़ नहीं चल पाई। ब्राउज़र में हिंदी वॉइस जांचें।' : 'Could not play speech. Check installed browser voices.');
+  window.speechSynthesis.speak(utterance);
+}
+document.getElementById('languageSelect').value = agriCurrentLanguage;
+document.getElementById('languageSelect').addEventListener('change', e => {
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  agriTranslatePage(e.target.value);
+});
+document.getElementById('speakBtn').addEventListener('click', agriSpeak);
+document.getElementById('stopSpeakBtn').addEventListener('click', () => {
+  if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+});
+if ('speechSynthesis' in window) window.speechSynthesis.getVoices();
+agriTranslatePage(agriCurrentLanguage);
+// Keep the page heading and page content translated when the user navigates.
+const agriShowPageOriginal = showPage;
+showPage = function(id) {
+  agriShowPageOriginal(id);
+  agriTranslatePage(agriCurrentLanguage);
+};
+
+</script>
+
+<style>
+/* Older-farmer accessibility controls */
+.top-actions .pill{min-height:44px}
+.voice-choice select{border:0;background:transparent;color:inherit;font-weight:700;max-width:110px;min-height:30px}
+.help-pill{background:#fff4d9!important;border:1px solid #e7c36e!important;color:#573d08!important;font-weight:800!important}
+#agriHelpPanel{position:fixed;inset:0;z-index:1000;background:rgba(12,30,19,.62);display:none;align-items:center;justify-content:center;padding:16px}
+#agriHelpPanel.open{display:flex}
+#agriHelpCard{width:min(720px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:20px;padding:24px;box-shadow:0 18px 60px rgba(0,0,0,.25);color:#203329}
+#agriHelpCard h2{font-size:clamp(24px,4vw,32px);margin:0 0 8px}
+#agriHelpCard p,#agriHelpCard li{font-size:18px;line-height:1.65}
+#agriHelpCard li{margin:10px 0}
+.agri-help-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.agri-help-actions button{font-size:18px;font-weight:800;padding:13px 18px;border-radius:12px;border:0;min-height:50px}
+#agriHelpListen{background:#1f6b45;color:#fff}#agriHelpClose{background:#edf2eb;color:#203329}
+#agriHelpCard .help-note{background:#f3f7ed;border-radius:12px;padding:12px 14px}
+#agriHelpBtnFloating{position:fixed;right:18px;bottom:18px;z-index:50;border:0;border-radius:999px;background:#1f6b45;color:white;padding:16px 20px;font-size:18px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+@media(max-width:700px){.top-actions{gap:6px;flex-wrap:wrap}.top-actions .pill{font-size:13px;padding:7px 9px}.voice-choice select{max-width:85px}#agriHelpBtnFloating{right:12px;bottom:12px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<div id="agriHelpPanel" role="dialog" aria-modal="true" aria-labelledby="agriHelpTitle">
+ <div id="agriHelpCard">
+  <h2 id="agriHelpTitle">AgriSmart – Simple Voice Guide</h2>
+  <p id="agriHelpIntro">This guide explains how to use the website. Choose your language, then press Listen.</p>
+  <ol id="agriHelpSteps"></ol>
+  <p class="help-note" id="agriVoiceNote">Voice availability depends on the voices installed in your browser or device. Male/female choices appear only when matching voices are available.</p>
+  <div class="agri-help-actions">
+   <button id="agriHelpListen" type="button">🔊 Listen to instructions</button>
+   <button id="agriHelpClose" type="button">Close</button>
+  </div>
+ </div>
+</div>
+<button id="agriHelpBtnFloating" type="button">❔ Help</button>
+
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const voiceSelect = $('voiceGenderSelect');
+  const panel = $('agriHelpPanel');
+  const steps = $('agriHelpSteps');
+  let guideText = '';
+
+  const guide = {
+    en: {
+      title:'AgriSmart – Simple Voice Guide',
+      intro:'Welcome. This guide explains how to use the website. Choose your language and press Listen.',
+      steps:[
+        'First, choose English, Telugu or Hindi from the Language menu at the top.',
+        'Choose Automatic, Male or Female in the Voice menu. The available voices depend on your phone or computer.',
+        'Press Listen to hear the information on the current page. Press Stop to stop the voice.',
+        'Choose Overview to see the farming dashboard and the main information.',
+        'Choose Fertilizer planner to calculate an approximate fertilizer quantity. Enter the field area and fertilizer rate, then press Calculate. Follow your soil-test report or local agriculture officer for the actual recommendation.',
+        'Choose Farmer survey to answer the questions. Fill in the details and submit the survey.',
+        'Choose Project insights to view the project information and results.',
+        'Choose Learning centre to read or listen to lessons about fertilizers, soil health and good farming practices.',
+        'Choose About the project to learn why this website was created.',
+        'If you need help, press the Help button at the bottom of the screen.'
+      ],
+      note:'Important: Male or female voice options are available only if your browser or device has voices of that type for the selected language. If one is unavailable, Automatic voice will be used.',
+      voice:'Voice',help:'Voice guide',listen:'Listen to instructions',close:'Close',automatic:'Automatic',male:'Male',female:'Female'
+    },
+    te: {
+      title:'AgriSmart – సులభమైన వాయిస్ మార్గదర్శిని',
+      intro:'స్వాగతం. ఈ వెబ్‌సైట్‌ను ఎలా ఉపయోగించాలో ఈ మార్గదర్శిని వివరిస్తుంది. మీ భాషను ఎంచుకుని వినండి నొక్కండి.',
+      steps:[
+        'ముందుగా పై భాగంలోని భాష ఎంపికలో తెలుగు, हिन्दी లేదా English ఎంచుకోండి.',
+        'వాయిస్ ఎంపికలో ఆటోమేటిక్, పురుష లేదా మహిళా వాయిస్ ఎంచుకోండి. అందుబాటులో ఉన్న వాయిస్‌లు మీ ఫోన్ లేదా కంప్యూటర్‌పై ఆధారపడి ఉంటాయి.',
+        'ప్రస్తుత పేజీలోని సమాచారాన్ని వినడానికి వినండి నొక్కండి. వాయిస్ ఆపడానికి ఆపండి నొక్కండి.',
+        'వ్యవసాయ డాష్‌బోర్డ్ మరియు ముఖ్యమైన సమాచారాన్ని చూడటానికి సారాంశం ఎంపికను నొక్కండి.',
+        'ఎరువుల ప్రణాళికలో పొలం విస్తీర్ణం మరియు ఎరువు మోతాదును నమోదు చేసి లెక్కించండి నొక్కండి. సరైన మోతాదు కోసం నేల పరీక్ష నివేదిక లేదా వ్యవసాయ అధికారుల సలహాను అనుసరించండి.',
+        'రైతుల సర్వేలో ప్రశ్నలకు సమాధానాలు ఇచ్చి సమర్పించండి.',
+        'ప్రాజెక్ట్ వివరాల్లో ప్రాజెక్టుకు సంబంధించిన సమాచారం మరియు ఫలితాలను చూడండి.',
+        'అభ్యాస కేంద్రంలో ఎరువులు, నేల ఆరోగ్యం మరియు మంచి వ్యవసాయ పద్ధతుల గురించి చదవండి లేదా వినండి.',
+        'ప్రాజెక్ట్ గురించి ఎంపికలో ఈ వెబ్‌సైట్ ఎందుకు రూపొందించారో తెలుసుకోండి.',
+        'సహాయం కావాలంటే స్క్రీన్ కింద ఉన్న సహాయం బటన్‌ను నొక్కండి.'
+      ],
+      note:'గమనిక: ఎంచుకున్న భాషలో పురుష లేదా మహిళా వాయిస్ మీ బ్రౌజర్ లేదా పరికరంలో ఉంటేనే పనిచేస్తుంది. అందుబాటులో లేకపోతే ఆటోమేటిక్ వాయిస్ ఉపయోగించబడుతుంది.',
+      voice:'వాయిస్',help:'వాయిస్ మార్గదర్శిని',listen:'సూచనలు వినండి',close:'మూసివేయండి',automatic:'ఆటోమేటిక్',male:'పురుష',female:'మహిళ'
+    },
+    hi: {
+      title:'AgriSmart – आसान आवाज़ मार्गदर्शिका',
+      intro:'स्वागत है। यह मार्गदर्शिका वेबसाइट का उपयोग करना समझाती है। अपनी भाषा चुनें और सुनें दबाएँ।',
+      steps:[
+        'सबसे पहले ऊपर दिए गए भाषा विकल्प में हिंदी, తెలుగు या English चुनें।',
+        'आवाज़ विकल्प में Automatic, Male या Female चुनें। उपलब्ध आवाज़ आपके फोन या कंप्यूटर पर निर्भर करती है।',
+        'मौजूदा पेज की जानकारी सुनने के लिए सुनें दबाएँ। आवाज़ बंद करने के लिए रोकें दबाएँ।',
+        'खेती डैशबोर्ड और मुख्य जानकारी देखने के लिए अवलोकन चुनें।',
+        'उर्वरक योजना में खेत का क्षेत्रफल और उर्वरक की दर भरें और Calculate दबाएँ। सही मात्रा के लिए मिट्टी जांच रिपोर्ट या स्थानीय कृषि अधिकारी की सलाह मानें।',
+        'किसान सर्वेक्षण में सवालों के जवाब भरें और सर्वेक्षण जमा करें।',
+        'परियोजना की जानकारी में परियोजना के विवरण और परिणाम देखें।',
+        'सीखने के केंद्र में उर्वरक, मिट्टी के स्वास्थ्य और अच्छी खेती के तरीकों के बारे में पढ़ें या सुनें।',
+        'परियोजना के बारे में विकल्प में जानें कि यह वेबसाइट क्यों बनाई गई।',
+        'मदद चाहिए तो स्क्रीन के नीचे दिए गए Help बटन को दबाएँ।'
+      ],
+      note:'ध्यान दें: चुनी हुई भाषा में पुरुष या महिला आवाज़ तभी मिलेगी जब वह आपके ब्राउज़र या डिवाइस में उपलब्ध हो। नहीं मिलने पर Automatic आवाज़ चलेगी।',
+      voice:'आवाज़',help:'आवाज़ मार्गदर्शिका',listen:'निर्देश सुनें',close:'बंद करें',automatic:'Automatic',male:'पुरुष',female:'महिला'
+    }
+  };
+
+  function currentLang(){ return (typeof agriCurrentLanguage !== 'undefined' && guide[agriCurrentLanguage]) ? agriCurrentLanguage : 'en'; }
+  function currentGuide(){ return guide[currentLang()]; }
+  function buildGuide(){
+    const g=currentGuide();
+    $('agriHelpTitle').textContent=g.title;
+    $('agriHelpIntro').textContent=g.intro;
+    $('agriVoiceNote').textContent=g.note;
+    $('voiceLabel').textContent=g.voice;
+    $('helpGuideLabel').textContent=g.help;
+    $('agriHelpListen').textContent='🔊 '+g.listen;
+    $('agriHelpClose').textContent=g.close;
+    voiceSelect.options[0].textContent=g.automatic;
+    voiceSelect.options[1].textContent=g.female;
+    voiceSelect.options[2].textContent=g.male;
+    steps.innerHTML='';
+    g.steps.forEach(s=>{const li=document.createElement('li');li.textContent=s;steps.appendChild(li);});
+    guideText=g.intro+' '+g.steps.join(' ');
+    if(panel.classList.contains('open')) $('agriHelpTitle').focus?.();
+  }
+  function openGuide(){ buildGuide(); panel.classList.add('open'); $('agriHelpClose').focus(); }
+  function closeGuide(){ panel.classList.remove('open'); $('agriHelpBtnFloating').focus(); }
+  $('helpGuideBtn').addEventListener('click',openGuide);
+  $('agriHelpBtnFloating').addEventListener('click',openGuide);
+  $('agriHelpClose').addEventListener('click',closeGuide);
+  panel.addEventListener('click',e=>{if(e.target===panel)closeGuide();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('open'))closeGuide();});
+
+  voiceSelect.value=localStorage.getItem('agrismart_voice_gender')||'auto';
+  voiceSelect.addEventListener('change',()=>localStorage.setItem('agrismart_voice_gender',voiceSelect.value));
+
+  function findVoice(locale,gender){
+    const voices=window.speechSynthesis ? window.speechSynthesis.getVoices() : [];
+    const lang=locale.toLowerCase();
+    const matches=voices.filter(v=>v.lang.toLowerCase()===lang || v.lang.toLowerCase().startsWith(lang.slice(0,2)));
+    if(!matches.length)return null;
+    if(gender==='auto')return matches.find(v=>v.lang.toLowerCase()===lang)||matches[0];
+    const femaleWords=/female|woman|zira|samantha|susan|heera|kalpana|lekha|google.*female|priya/i;
+    const maleWords=/male|man|david|mark|ravi|hemant|google.*male/i;
+    const re=gender==='female'?femaleWords:maleWords;
+    return matches.find(v=>re.test(v.name)) || null;
+  }
+  function speakText(text){
+    if(!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)){
+      if(typeof toast==='function')toast('Speech is not supported in this browser.');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const lang=currentLang();
+    const locale=lang==='te'?'te-IN':lang==='hi'?'hi-IN':'en-IN';
+    const utterance=new SpeechSynthesisUtterance(text);
+    utterance.lang=locale; utterance.rate=0.88; utterance.pitch=1;
+    const selected=findVoice(locale,voiceSelect.value);
+    if(selected)utterance.voice=selected;
+    else if(voiceSelect.value!=='auto' && typeof toast==='function'){
+      toast(lang==='te'?'ఈ భాషలో ఎంచుకున్న వాయిస్ అందుబాటులో లేదు. ఆటోమేటిక్ వాయిస్ ఉపయోగించండి.':lang==='hi'?'इस भाषा में चुनी गई आवाज़ उपलब्ध नहीं है। Automatic चुनें।':'That voice type is not available for this language. Please choose Automatic.');
+    }
+    window.speechSynthesis.speak(utterance);
+  }
+  $('agriHelpListen').addEventListener('click',()=>{buildGuide();speakText(guideText);});
+  // Use the same selected voice for the existing Listen button.
+  if(typeof agriSpeak==='function'){
+    agriSpeak=function(){
+      const active=document.querySelector('.page.active');
+      const spoken=(active||document.body).innerText.replace(/\s+/g,' ').trim();
+      speakText(spoken);
+    };
+  }
+  const originalTranslate=agriTranslatePage;
+  agriTranslatePage=function(lang){originalTranslate(lang);buildGuide();};
+  buildGuide();
+})();
+</script>
+
+</body>
+</html>
